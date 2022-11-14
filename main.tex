@@ -1,0 +1,495 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Khóa luận tốt nghiệp/Tiểu luận 
+% LaTeX Template
+% Phiên bản 1.0 (tạo ra ngày 05/10/2022)
+%
+% Template này có thể được download từ:
+% ???????
+%
+% Phiên bản 1.0 được chỉnh sửa bởi:
+% Công Phương Cao (congphuongcao_t59@hus.edu.vn)
+% Nguyễn Cảnh Việt (vietncp@gmail.com)
+% Nguyễn Tiến Cường (ngtiencuong@gmail.com)
+%
+% Template được tham khảo từ một phiên bản template của:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	PHẦN 1: CÁC PACKAGE CƠ BẢN VÀ CÁC TÙY CHỈNH VĂN BẢN
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+12pt,
+oneside,
+english,
+doublespacing,
+nolistspacing,
+liststotoc,
+parskip,
+headsepline,
+chapterinoneline,
+]{MastersDoctoralThesis}
+
+% \usepackage[utf8]{inputenc} 
+\usepackage[utf8]{vietnam} 
+%\usepackage[T1]{fontenc}
+
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\allowdisplaybreaks
+
+%https://www.overleaf.com/learn/latex/Biblatex_citation_styles
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+\usepackage[backend=bibtex,style=numeric,citestyle=ieee,natbib=true]{biblatex}
+
+\addbibresource{main.bib}
+
+\usepackage[autostyle=true]{csquotes}
+
+
+%----------------------------------------------------------------------------------------
+%	PHẦN 2: CÁC PACKAGE BỔ TRỢ THÊM VÀO TRONG QUÁ TRÌNH BIÊN SOẠN
+%----------------------------------------------------------------------------------------
+
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage[fontsize=13pt]{scrextend}
+
+%https://www.sascha-frank.com/latex-font-size.html
+%https://tex.stackexchange.com/questions/103286/how-to-change-section-subsection-font-size
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\normalfont\fontsize{13}{13}\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\fontsize{13}{13}\bfseries\itshape}{\thesubsection}{1em}{}
+
+\usepackage{listings} 		% Liệt kê/trích dẫn code
+
+%https://tex.stackexchange.com/questions/351961/how-to-indent-code-in-beginverbatim
+\usepackage{fancyvrb} 		% Fancy Verbatim
+\fvset{tabsize=4,vspace=0pt,fontsize=\footnotesize}
+
+\usepackage{longtable} 		% Bảng dài - Long table
+
+\usepackage[figuresright]{rotating} % Bảng ngang - Sideways table
+\usepackage{tabularx}
+
+\usepackage{fontawesome5} 	% Các biểu tượng, ký hiệu đặc biệt
+
+\usepackage{tikz} 			% Vẽ hình
+\usetikzlibrary{calc}
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	PHẦN 3: CÁC TÙY CHỈNH LIỆT KÊ SOURCE CODE 
+%----------------------------------------------------------------------------------------
+
+%https://tex.stackexchange.com/questions/33039/using-ttfamily-with-bfseries-or-how-to-enable-bold-in-fixed-width-font
+\renewcommand{\ttdefault}{pcr}
+\newenvironment{pcr}{\fontfamily{pcr}\selectfont}
+
+\definecolor{backcolor}{HTML}{f5fffc}
+\definecolor{darkpink}{rgb}{0.75,0.25,0.5}
+\definecolor{cadetblue}{rgb}{.6,.8,.8}
+
+\lstset{
+	tabsize			= 4,
+	breaklines		= true,
+	basicstyle		= \ttfamily\color{black}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{black},
+	keywordstyle	= \ttfamily\color{blue}\bfseries,  
+	stringstyle		= \ttfamily\color{Red},
+	commentstyle	= \itshape\color{cyan},
+	%===================================================================================
+	frame			= l,
+	numbers			= left,
+	stepnumber		= 1, 
+	upquote			= true,
+	numberstyle		= \tiny\color{Gray},
+	backgroundcolor	= \color{backcolor},
+	rulecolor		= \color{lightgray},
+	rulesepcolor	= \color{lightgray},
+	showstringspaces=false
+	keepspaces		= true, 
+	belowcaptionskip= 1\baselineskip,
+	xleftmargin		= \parindent,
+	%	escapeinside	= {@}{@},
+	numbersep		= 7pt
+}
+
+\lstdefinestyle{codeC} {
+	%https://www.pvv.ntnu.no/~berland/latex/docs/listings.pdf
+	%https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX
+	language		= [ISO]C++, 
+	basicstyle		= \linespread{1.0}\ttfamily\color{black}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{black},
+	keywordstyle	= \ttfamily\color{blue}\bfseries,  
+	stringstyle		= \ttfamily\color{Red},
+	commentstyle	= \itshape\color{cyan}, 
+	morekeywords	= {FILE},
+	%	emphstyle		= \ttfamily\color{red}\bfseries,
+	%	emph			= { auto,break,case,char,const,continue,default,do,double,else,enum,extern,float,for,goto,if,int,long,register,return,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile,while,FILE},
+	%https://tex.stackexchange.com/questions/283170/using-different-colors-for-different-keywords-in-lstlisting
+	classoffset		= 1, % starting new class
+	otherkeywords	= {\#include},
+	morekeywords	= {\#include},
+	keywordstyle	= \ttfamily\color{Green}\bfseries,
+	morecomment		= [s][\bfseries\color{Orange}]{<a}{>},% a b d e f i l m n q r s t u v
+	morecomment		= [s][\bfseries\color{Orange}]{<b}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<d}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<e}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<f}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<i}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<l}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<m}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<n}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<q}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<r}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<s}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<t}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<u}{>},
+	morecomment		= [s][\bfseries\color{Orange}]{<v}{>},
+	morecomment		= [l][\bfseries\color{Green}]{\#define},
+	classoffset		= 0,
+}
+
+\lstdefinestyle{plaintext} {
+	%https://www.pvv.ntnu.no/~berland/latex/docs/listings.pdf
+	%https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX
+	language		= bash, 
+	basicstyle		= \linespread{1.0}\ttfamily\color{black}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{black},
+	keywordstyle	= \ttfamily\color{black}\bfseries,  
+	stringstyle		= \ttfamily\color{black},
+	commentstyle	= \itshape\color{gray}, 
+	%	showspaces		= true,
+	%	showstringspaces= true,
+	showtabs		= true,
+	tab				= \textcolor{lightgray}{$\to$},
+%	literate=*
+%	{0}{{{\color{darkpink}0}}}{1}
+}
+
+\lstdefinestyle{codeMatlab} {
+	language		= Matlab,
+	basicstyle		= \linespread{1.0}\ttfamily\color{black}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{black},
+	keywordstyle	= \ttfamily\color{blue}\bfseries,  
+	stringstyle		= \ttfamily\color{magenta},
+	commentstyle	= \itshape\color{LimeGreen},
+	morecomment		= [l][\bfseries\color{red}]{\%\%},
+	morekeywords	= {syms,switch,case,otherwise,ones,class,inline,vectorize,factorial,xlim,ylim,ezplot,pie,ezmesh,ezsurf,ezcontour,ezplot3,solve,double,subs,fsolve,fminsearch,compose,jacobian,int,dblquad,triplequad,limit,finverse,simplify,taylor,symsum,evalin,symengine,matlabFunction,poly2sym,lsqcurvefit,ppval,dsolve},
+	literate		=*,
+	literate		=*
+	{^}{\textasciicircum}{1}
+}
+
+\lstdefinestyle{codePython} {
+	language		= Python,
+	basicstyle		= \linespread{1.0}\ttfamily\color{black}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{black},
+	keywordstyle	= \ttfamily\color{blue}\bfseries,  
+	stringstyle		= \ttfamily\color{LimeGreen},
+	commentstyle	= \itshape\color{cadetblue},
+	morekeywords	= {self},
+	emph			={MyClass,__init__},
+	emphstyle		=\ttb\color{red},
+	literate		=*,
+	literate		=*
+	{^}{\textasciicircum}{1}
+}
+
+%https://www.alanshawn.com/tech/2019/09/01/emulate-terminal.html
+\definecolor{tergreen}{rgb}{0,0.6,0}
+\definecolor{tergray}{rgb}{0.5,0.5,0.5}
+\definecolor{termauve}{rgb}{0.58,0,0.82}
+\definecolor{terminalbgcolor}{HTML}{330033}
+\definecolor{terminalrulecolor}{HTML}{000099}
+\lstdefinestyle{console} {
+	backgroundcolor	= \color{terminalbgcolor},
+	basicstyle		= \linespread{1.0}\ttfamily\color{white}\bfseries\scriptsize,
+	identifierstyle	= \ttfamily\color{white}\bfseries\scriptsize,
+	breakatwhitespace=false,
+	breaklines		= true,
+	captionpos		= b,
+	commentstyle	= \color{tergreen},
+	deletekeywords	= {...},
+	escapeinside	= {\%*}{*)},
+	extendedchars	= true,
+	frame			= single,
+	keepspaces		= true,
+	keywordstyle	= \color{blue},
+	language		= {},
+	morekeywords	= {*,...},
+	numbers			= none,
+	numbersep		= 5pt,
+	framerule		= 2pt,
+	numberstyle		= \color{tergray}\tiny\selectfont,
+	rulecolor		= \color{terminalrulecolor},
+	showspaces		= false,
+	showstringspaces= false,
+	showtabs		= false,
+	stepnumber		= 2,
+	stringstyle		= \color{termauve},
+	tabsize			= 2,
+	literate		=*
+}
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	PHẦN 4: CÁC TÙY CHỈNH KHỔ GIẤY VÀ CĂN LỀ
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper,
+	inner=3cm,
+	outer=2cm,
+	bindingoffset=0cm,
+	top=0.6cm,
+	bottom=2.0cm,
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PHẦN 5: THÔNG TIN VỀ Khóa luận tốt nghiệp/Tiểu luận (THESIS INFORMATION)
+%----------------------------------------------------------------------------------------
+
+\author{Tên sinh viên thực hiện} 			% Ví dụ: "Nguyễn Thị Thu Thảo"
+\thesistitle{Tên của Khóa luận tốt nghiệp/Tiểu luận} % Ví dụ: "Nghiên cứu chế tạo và tính chất quang học của vật liệu nano LaF3:Sm3+"
+
+\supervisor {Tên giảng viên hướng dẫn 1} 	% Ví dụ: "PGS. TS. Nguyễn Ngọc Long"
+\supervisorr{Tên giảng viên hướng dẫn 2} 	% Tên này nếu không có thì để trống!
+
+\field{Ngành đào tạo} 						% Ví dụ: "Ngành Vật lý", "Ngành Hóa học", v.v.
+\program{Tên chương trình đào tạo} 			% Ví dụ: "Chương trình đào tạo chuẩn", "Chương trình đào tạo cử nhân tài năng", v.v.
+\doctype{Khóa luận tốt nghiệp đại học hệ chính quy} % Điền vào đây: "Khóa luận tốt nghiệp đại học hệ chính quy" hoặc "Tiểu luận"
+
+\university{\href{http://hus.vnu.edu.vn}{Trường Đại học Khoa học Tự nhiên}}
+\department{\href{http://hus.vnu.edu.vn/gioi-thieu/co-cau-to-chuc/khoa-truc-thuoc/khoa-vat-ly.html}{Khoa Vật lý}}
+
+\AtBeginDocument{
+	\hypersetup{pdftitle=\ttitle}
+	\hypersetup{pdfauthor=\authorname}
+}
+
+
+\begin{document}
+
+\lstset{style=codeC}	% Thiết lập ngôn ngữ C/C++ là ngôn ngữ mặc định cho phần liệt kê souce code của cả bài
+
+\frontmatter 			% Sử dụng hệ thống đánh số La Mã (i, ii, iii, iv...) cho những trang trước phần mục lục
+
+\pagestyle{plain} 
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	Phần 6: TRANG TIÊU ĐỀ/TRANG BÌA (TITLE PAGE)
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+	\begin{tikzpicture}[overlay,remember picture]
+		\draw [line width=3pt]
+		($ (current page.north west) + (2.0cm,-2.0cm) $)
+		rectangle
+		($ (current page.south east) + (-1.5cm,1.8cm) $);
+		\draw [line width=1pt]
+		($ (current page.north west) + (2.15cm,-2.15cm) $)
+		rectangle
+		($ (current page.south east) + (-1.65cm,1.95cm) $); 
+	\end{tikzpicture}
+	\begin{center}
+		
+		\vspace*{-.05\textheight}
+		\noindent\scshape
+		\Large \, \href{https://www.vnu.edu.vn/home/}{Đại học Quốc gia Hà Nội}\\
+		\vspace{-0.4cm}\Large \, \univname\\
+		\vspace{-0.4cm}\Large \, \textbf{\deptname}\\[0.5cm]
+		\includegraphics{Logo/Logo_HUS_notext}
+		
+		\vspace{0.7cm}
+		
+		\textsc{\Large \authorname}\\
+		
+		\vspace{2.0cm}
+		
+		{\LARGE \bfseries \ttitle\par}
+		
+		\vspace{2.0cm}
+		
+		{\normalsize \docname\\ fieldname\\ (\progname)\\}
+	 
+	 	\vspace{2.0cm}
+	 	
+		\begin{minipage}[t]{0.49\textwidth}
+			\begin{flushright} \large \bfseries
+				Giảng viên hướng dẫn:\;
+			\end{flushright}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			\begin{flushleft} \large \bfseries
+				\supname\\
+				\supnamee
+			\end{flushleft}
+		\end{minipage}
+	
+		\vfill
+		
+		\textbf{Hà Nội - \the\year{}}
+	\end{center}
+\end{titlepage}
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 7: DANH NGÔN (QUOTES)
+%----------------------------------------------------------------------------------------
+
+\vspace*{0.2\textheight}
+
+\noindent\enquote{\itshape 
+	Cái tôi và sự hiểu biết tỷ lệ nghịch với nhau. Hiểu biết càng nhiều cái tôi càng bé. Hiểu biết càng ít, cái tôi càng to.
+}\bigbreak
+
+\hfill Albert Einstein
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 8: LỜI CẢM ƠN (ACKNOWLEDGEMENTS)
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+	\addchaptertocentry{\acknowledgementname}
+	\thispagestyle{empty}
+	Sự ghi nhận và lời cảm ơn đối đối với những người liên quan, đừng quên cảm ơn giảng viên hướng dẫn của bạn\ldots
+\end{acknowledgements}
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	Phần 9: MỤC LỤC (LIST OF CONTENTS/FIGURES/TABLES PAGES)
+%----------------------------------------------------------------------------------------
+
+\begin{spacing}{1.15}
+	\tableofcontents 	% In ra mục lục chính
+\end{spacing}
+
+\begin{spacing}{1.15}
+	\listoffigures 		% In ra danh sách hình vẽ
+\end{spacing}
+
+\begin{spacing}{1.15}
+	\listoftables		% In ra danh sách bảng
+\end{spacing}
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 10: DANH SÁCH TÊN VIẾT TẮT (ABBREVIATIONS)
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Thêm danh sách tên viết tắt (dưới dạng một bảng có 2 cột)
+
+\textbf{TVT} & \textbf{T}ên \textbf{V}iết \textbf{T}ắt\\
+\textbf{ĐTĐ} & \textbf{Đ}ặt (nó) \textbf{T}ại \textbf{Đ}ây\\
+
+\end{abbreviations}
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 11: CÁC HẰNG SỐ VẬT LÝ/THÔNG SỐ KĨ THUẬT (PHYSICAL CONSTANTS/OTHER DEFINITIONS)
+%----------------------------------------------------------------------------------------
+
+\begin{constants}{lr@{${}={}$}l} % Thêm danh sách các hằng số (dưới dạng một bảng có 3 cột)
+
+%	Lệnh \SI{}{} được cung cấp bởi gói siunitx, hãy đọc tài liệu hướng dẫn để biết cách sử dụng nó
+
+%	Tên hằng số 	 & $Biểu tượng$	& $Hằng số$ cùng với đơn vị\\
+	Vận tốc ánh sáng & $c_{0}$		& \SI{2.99792458e8}{\meter\per\second} (chính xác)\\
+
+\end{constants}
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 12: DANH SÁCH KÝ HIỆU (SYMBOLS)
+%----------------------------------------------------------------------------------------
+
+\begin{symbols}{lll} % Thêm danh sách các ký hiệu (dưới dạng một bảng có 3 cột)
+
+%   Ký hiệu	& Ý nghĩa		& Đơn vị \\
+	$a$		& khoảng cách	& \si{\meter} \\
+	$P$		& công suất		& \si{\watt} (\si{\joule\per\second}) \\
+
+	\addlinespace % Khoảng cách để phân biệt giữa ký hiệu Latin với ký hiệu La Mã
+
+	$\omega$ & tần số góc	& \si{\radian} \\
+
+\end{symbols}
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	Phần 13: LỜI ĐỀ TẶNG (DEDICATION)
+%----------------------------------------------------------------------------------------
+
+%\dedicatory{Dành tặng/Dành cho/Gửi tới\ldots} 
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 14: NỘI DUNG/CÁC CHƯƠNG Khóa luận tốt nghiệp/Tiểu luận (THESIS CONTENT - CHAPTERS)
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Bắt đầu đánh số trang (1,2,3...)
+
+\pagestyle{plain}
+
+% Hãy thêm những chương (chapter) của khóa luận/tiểu luận vào thư mục Chapters
+% Hãy bỏ chú thích những dòng nếu bạn đã bổ sung những chương vào
+
+\include{Chapters/Chapter1}
+%\include{Chapters/Chapter2} 
+%\include{Chapters/Chapter3}
+%\include{Chapters/Chapter4} 
+%\include{Chapters/Chapter5} 
+
+
+%----------------------------------------------------------------------------------------
+%	Phần 15: PHỤ LỤC (THESIS CONTENT - APPENDICES)
+%----------------------------------------------------------------------------------------
+
+\appendix % Nói với LaTeX rằng những chương về sau được tính là phụ lục
+
+% Hãy thêm những phụ lục (appendix) của khóa luận/tiểu luận vào thư mục Appendices
+% Hãy bỏ chú thích những dòng nếu bạn đã bổ sung những phụ lục vào
+
+\include{Appendices/AppendixA}
+\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+
+%----------------------------------------------------------------------------------------
+%	(KHÔNG CHỈNH SỬA PHẦN NÀY)
+%
+%	Phần 16: TÀI LIỆU THAM KHẢO
+%----------------------------------------------------------------------------------------
+
+\begin{spacing}{1.15}
+	\printbibliography[heading=bibintoc, title=Tài liệu tham khảo] % In ra tài liệu tham khảo
+\end{spacing}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
