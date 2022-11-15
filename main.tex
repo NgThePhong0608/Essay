@@ -3,8 +3,8 @@
 % LaTeX Template
 % Phiên bản 1.0 (tạo ra ngày 05/10/2022)
 %
-% Template này có thể được download từ:
-% ???????
+% Template này có thể được download tại:
+% https://github.com/cpc1996/HUS-Dissertation-Template
 %
 % Phiên bản 1.0 được chỉnh sửa bởi:
 % Công Phương Cao (congphuongcao_t59@hus.edu.vn)
@@ -272,7 +272,7 @@ chapterinoneline,
 \supervisor {Tên giảng viên hướng dẫn 1} 	% Ví dụ: "PGS. TS. Nguyễn Ngọc Long"
 \supervisorr{Tên giảng viên hướng dẫn 2} 	% Tên này nếu không có thì để trống!
 
-\field{Ngành đào tạo} 						% Ví dụ: "Ngành Vật lý", "Ngành Hóa học", v.v.
+\field{Tên ngành đào tạo} 					% Ví dụ: "Ngành Vật lý", "Ngành Hóa học", v.v.
 \program{Tên chương trình đào tạo} 			% Ví dụ: "Chương trình đào tạo chuẩn", "Chương trình đào tạo cử nhân tài năng", v.v.
 \doctype{Khóa luận tốt nghiệp đại học hệ chính quy} % Điền vào đây: "Khóa luận tốt nghiệp đại học hệ chính quy" hoặc "Tiểu luận"
 
@@ -300,6 +300,7 @@ chapterinoneline,
 %	Phần 6: TRANG TIÊU ĐỀ/TRANG BÌA (TITLE PAGE)
 %----------------------------------------------------------------------------------------
 
+% TRANG BÌA:
 \begin{titlepage}
 	\begin{tikzpicture}[overlay,remember picture]
 		\draw [line width=3pt]
@@ -313,26 +314,66 @@ chapterinoneline,
 	\end{tikzpicture}
 	\begin{center}
 		
-		\vspace*{-.05\textheight}
+		\vspace{-.04\textheight}
 		\noindent\scshape
-		\Large \, \href{https://www.vnu.edu.vn/home/}{Đại học Quốc gia Hà Nội}\\
-		\vspace{-0.4cm}\Large \, \univname\\
-		\vspace{-0.4cm}\Large \, \textbf{\deptname}\\[0.5cm]
+		\large \, \href{https://www.vnu.edu.vn/home/}{ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
+		\vspace{-0.25cm}{\large \MakeUppercase \univname}\\
+		\vspace{-0.25cm}{\large \bfseries \MakeUppercase \deptname}\\[0.5cm]
+		\includegraphics{Logo/Logo_HUS_notext_nocolor}
+		
+		\vspace{1.0cm}
+		
+		{\large \MakeUppercase \authorname}
+		
+		\vspace{2.5cm}
+		
+		{\Large \bfseries \MakeUppercase\ttitle\par}
+		
+		\vspace{2.5cm}
+		
+		{\normalsize \docname\\ \fieldname\\ (\progname)\\}
+	
+		\vfill
+		
+		\textbf{Hà Nội - \the\year{}}
+	\end{center}
+\end{titlepage}
+
+
+% TRANG BÌA LÓT:
+\begin{titlepage}
+	\begin{tikzpicture}[overlay,remember picture]
+		\draw [line width=3pt]
+		($ (current page.north west) + (2.0cm,-2.0cm) $)
+		rectangle
+		($ (current page.south east) + (-1.5cm,1.8cm) $);
+		\draw [line width=1pt]
+		($ (current page.north west) + (2.15cm,-2.15cm) $)
+		rectangle
+		($ (current page.south east) + (-1.65cm,1.95cm) $); 
+	\end{tikzpicture}
+	\begin{center}
+		
+		\vspace{-.04\textheight}
+		\noindent\scshape
+		\large \, \href{https://www.vnu.edu.vn/home/}{ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
+		\vspace{-0.25cm}{\large \MakeUppercase \univname}\\
+		\vspace{-0.25cm}{\large \bfseries \MakeUppercase \deptname}\\[0.5cm]
 		\includegraphics{Logo/Logo_HUS_notext}
 		
-		\vspace{0.7cm}
+		\vspace{1.0cm}
 		
-		\textsc{\Large \authorname}\\
+		{\large \MakeUppercase \authorname}
 		
-		\vspace{2.0cm}
+		\vspace{2.5cm}
 		
-		{\LARGE \bfseries \ttitle\par}
+		{\Large \bfseries \MakeUppercase\ttitle\par}
 		
-		\vspace{2.0cm}
+		\vspace{2.5cm}
 		
-		{\normalsize \docname\\ fieldname\\ (\progname)\\}
+		{\normalsize \docname\\ \fieldname\\ (\progname)\\}
 	 
-	 	\vspace{2.0cm}
+	 	\vspace{2.5cm}
 	 	
 		\begin{minipage}[t]{0.49\textwidth}
 			\begin{flushright} \large \bfseries
