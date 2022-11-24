@@ -131,6 +131,8 @@ Một số file cũng được bao gồm vào trong template. Hầu hết số t
 
 \keyword{setspace.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về căn chỉnh các khoảng cách như lề, dòng, khổ của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{MastersDoctoralThesis.cls}.
 
+\keyword{setlst.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về liệt kê/trích dẫn code của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{main.tex}.
+
 \keyword{main.pdf} -- đây là file khóa luận/tiểu luận đẹp đẽ (dưới định dạng file PDF) tạo ra bởi \LaTeX{}. Trong template này, file PDF được cung cấp sẵn. Sau khi bạn biên dịch lại template, bạn sẽ nhận được một file PDF y hệt.
 
 \keyword{main.tex} -- đây là một file quan trọng. Đây là file sẽ được \LaTeX{} biên dịch để tạo ra khóa luận/tiểu luận của bạn dưới định dạng file PDF. Nó chứa các khung và cấu trúc nội dung mà nói cho \LaTeX{} biết cách bố trí bố cục của khóa luận/tiểu luận. File này được ghi chú (comment) rất chi tiết nên bạn có thể biết chính xác thứ mỗi dòng code thực hiện và tại sao chúng ở đó. Sau khi bạn thêm thông tin cá nhân vào phần \emph{THÔNG TIN VỀ Khóa luận tốt nghiệp/Tiểu luận} -- bạn bây giờ đã bắt đầu biên soạn khóa luận/tiểu luận của mình!
@@ -166,7 +168,7 @@ Vậy từ danh sách dài này, chỉ những file có đuôi \file{.bib}, \fil
 
 Bạn sẽ cần cá nhân hóa template này và điền đầy đủ thông tin vào template, bằng cách chỉnh sửa file \file{main.tex} trong file ở một trình soạn thảo văn bản nào đó hoặc môi trường phát triển tích hợp (IDE) \LaTeX{} yêu thích của bạn.
 
-Hãy mở file \file{main.tex} và cuộn xuống phần nội dung lớn thứ ba tên là \emph{Phần 5: THÔNG TIN VỀ Khóa luận tốt nghiệp/Tiểu luận}, nơi bạn có thể thấy các mục \emph{Tên của Khóa luận tốt nghiệp/Tiểu luận}, \emph{Tên giảng viên hướng dẫn}, \emph{Tên sinh viên thực hiện}, v.v.
+Hãy mở file \file{main.tex} và cuộn xuống phần nội dung lớn thứ ba tên là \emph{Phần 3: THÔNG TIN VỀ Khóa luận tốt nghiệp/Tiểu luận}, nơi bạn có thể thấy các mục \emph{Tên của Khóa luận tốt nghiệp/Tiểu luận}, \emph{Tên giảng viên hướng dẫn}, \emph{Tên sinh viên thực hiện}, v.v.
 
 Hãy bổ sung đầy đủ thông tin về bản thân, về nhóm nghiên cứ, cơ sở đào tạo, v.v. Bạn cũng có thể chèn các đường dẫn (link), nếu làm vậy, hãy đảm bảo bạn sử dụng đường dẫn URL đầy đủ, bao gồm cả phần \code{http://}. Nếu bạn không muốn chèn các đường dẫn vào các tên thì hãy xóa phần \verb|\href{url}{name}| và chỉ đơn giản là để lại tên.
 
@@ -213,13 +215,6 @@ Do có sự khác biệt giữa \LaTeX{} với \textsc{wysiwyg} nên template đ
 %, lề trên 2cm, lề dưới 2cm, lề trái 3cm, và lề phải 2cm.
 
 
-\subsection{Định dạng khổ giấy}
-
-Khổ giấy được sử dụng trong template là A4, khổ giấy chuẩn của châu Âu. Nếu bạn đang sử dụng template này ở nơi nào đó khác, chẳng hạn như Mỹ, thì bạn sẽ muốn chuyển khổ giấy từ A4 thành khổ ``US Letter''. Để làm vậy, hãy thay đổi phần cài đặt ở phần \emph{CÁC TÙY CHỈNH KHỔ GIẤY VÀ CĂN LỀ} trong file \file{main.tex}.
-
-Bởi vì sự khác biệt về khổ giấy nên lề giấy có thể khác với thứ bạn cần (vì đa phần các trường/cơ sở đào tạo đểu quy định rõ kích thước lề). Nếu đúng như vậy, kích thước lề có thể được điều chỉnh bằng cách thay đổi các thông số ở phần \emph{CÁC TÙY CHỈNH KHỔ GIẤY VÀ CĂN LỀ} (cùng phần với cài đặt khổ giấy). Bây giờ thì tài liệu của bạn sẽ được thiết lập cho khổ giấy US Letter với lề phù hợp.
-
-
 \subsection{Trích dẫn tài liệu tham khảo}
 
 Package \code{biblatex} được sử dụng để định dạng mục tài liệu tham khảo và thêm các tài liệu chẳng hạn như \cite{Reference1}. Các tùy chỉnh được sử dụng trong file \file{main.tex} sẽ làm các trích dẫn tài liệu được định dạng với tên (các) tác giả được liệt kê cùng với năm xuất bản (tùy chọn \option{style=authoryear}), hoặc là chỉ hiện một số tương ứng với trích dẫn trong mục tài liệu tham khảo (tùy chọn \option{style=numeric}). Kiểu trích dẫn ở template này là \option{citestyle=ieee} (viết tắt của: \textit{Institute for Electrical and Electronics Engineers}) và định dạng trích dẫn là dạng đánh số (\option{style=numeric}). Các tài liệu được đánh số và sắp xếp một cách tự động cho bạn. Để xem cách sử dụng tài liệu, hãy xem qua file \file{Chapter1.tex}. Các phần mềm quản lý trích dẫn hiện nay cho phép bạn kéo-thả tài liệu trích dẫn vào văn bản khi bạn nhập.
@@ -241,12 +236,13 @@ Phần phụ trợ cho bibtex trong template này theo mặc định không chí
 Bảng số liệu là một cách hiệu quả để biểu diễn kết quả của bạn, dưới đây là bảng ví dụ được tạo bằng code sau:
 \begin{Verbatim}
 \begin{table}[h!]
-	\caption{Ảnh hưởng của phương pháp điều trị X và Y đối với bốn nhóm được nghiên cứu.}
+	\caption{Ảnh hưởng của phương pháp điều trị X và Y đối với bốn 
+			 nhóm được nghiên cứu.}
 	\label{tab:treatments}
 	\centering
 	\begin{tabular}{l l l}
 		\toprule
-		\tabhead{Nhóm} & \tabhead{Phương pháp X} & \tabhead{Phương pháp Y} \\
+		\tabhead{Nhóm}&\tabhead{Phương pháp X}&\tabhead{Phương pháp Y}\\
 		\midrule
 		1	& 0.20	& 0.80	\\
 		2	& 0.17	& 0.70	\\
@@ -263,7 +259,7 @@ Bảng số liệu là một cách hiệu quả để biểu diễn kết quả 
 	\centering
 	\begin{tabular}{l l l}
 		\toprule
-		\tabhead{Nhóm} & \tabhead{Phương pháp X} & \tabhead{Phương pháp Y} \\
+		\tabhead{Nhóm}&\tabhead{Phương pháp X}&\tabhead{Phương pháp Y}\\
 		\midrule
 		1	& 0.20	& 0.80	\\
 		2	& 0.17	& 0.70	\\

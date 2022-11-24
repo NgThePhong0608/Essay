@@ -266,6 +266,15 @@
 	includefoot
 }
 
+\geometry{% Custom addings
+	paper=a4paper,
+	inner=3cm,
+	outer=2cm,
+	bindingoffset=0cm,
+	top=0.6cm,
+	bottom=2.0cm,
+}
+
 \raggedbottom
 
 %----------------------------------------------------------------------------------------
