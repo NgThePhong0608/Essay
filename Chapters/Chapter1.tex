@@ -28,7 +28,7 @@ Nếu bạn đang hoặc sẽ biên soạn khóa luận tốt nghiệp/tiểu lu
 
 \section{Học \LaTeX{}}
 
-\LaTeX{} không phải một chương trình \textsc{wysiwyg} (What You See is What You Get, tạm dịch: \textit{Giao diện tương tác tức thời - mắt thấy tay làm}), không giống các trình soạn thảo văn bản như Microsoft Word hoặc Pages của Apple. Một văn bản được viết cho \LaTeX{} chỉ đơn thuần là một file (tập tin) văn bản đơn giản \emph{không có định dạng}. Bạn nói với \LaTeX{} cách bạn muốn văn bản định dạng bằng cách viết những dòng lệnh đơn giản trong văn bản, ví dụ, nếu tôi muốn sử dụng \emph{chữ in nghiêng (italic)}, tôi viết lệnh \verb|\emph{nội dung}| và đưa nội dung tôi muốn in nghiêng vào trong dấu ngoặc nhọn. Điều này có nghĩa rằng \LaTeX{} là một ngôn ngữ lập trình \enquote{đánh dấu (mark-up)}, tương tự như HTML.
+\LaTeX{} không phải một chương trình \textsc{wysiwyg} (What You See is What You Get, tạm dịch: \textit{Giao diện tương tác tức thời - mắt thấy tay làm}), không giống các trình soạn thảo văn bản như Microsoft Word hoặc Pages của Apple. Một văn bản được viết cho \LaTeX{} chỉ đơn thuần là một file (tập tin) văn bản đơn giản \emph{không có định dạng}. Bạn nói với \LaTeX{} cách bạn muốn văn bản định dạng bằng cách viết những dòng lệnh đơn giản trong văn bản, ví dụ, nếu bạn muốn sử dụng \emph{chữ in nghiêng (italic)}, bạn viết lệnh \verb|\emph{nội dung}| và đưa nội dung bạn muốn in nghiêng vào trong dấu ngoặc nhọn. Điều này có nghĩa rằng \LaTeX{} là một ngôn ngữ lập trình \enquote{đánh dấu (mark-up)}, tương tự như HTML.
 
 
 \subsection{Một tài liệu ngắn gọn giới thiệu về \LaTeX{}}
@@ -126,13 +126,17 @@ Một số file cũng được bao gồm vào trong template. Hầu hết số t
 
 \keyword{main.bib} -- đây là một file quan trọng chứa tất cả các thông tin danh mục trích dẫn và tài liệu tham khảo mà bạn sẽ trích dẫn trong khóa luận/tiểu luận (sử dụng BibTeX). Bạn có thể viết nó một cách thủ công, nhưng có các phần mềm quản lý trích dẫn sẽ giúp bạn tạo và quản lý. Tài liệu tham khảo (bibliography) là một mục lớn trong \LaTeX{} và bạn có lẽ sẽ cần đọc về định dạng BibTeX trước khi bắt đầu biên soạn. Các phần mềm quản lý trích dẫn hiện nay cho phép bạn trích xuất các trích dẫn theo định dạng BibTeX, thứ sẽ tiết kiệm công sức của các bạn rất nhiều.
 
-\keyword{MastersDoctoralThesis.cls} -- đây là một file quan trọng. Nó là file chứa định các cài đặt định dạng \LaTeX{} của khóa luận tốt nghiệp/tiểu luận.
+\keyword{MastersDoctoralThesis.cls} -- đây là một file quan trọng. Nó là file chứa các cài đặt định dạng \LaTeX{} của khóa luận tốt nghiệp/tiểu luận.
 
-\keyword{setspace.sty} -- đây là một file quan trọng. Nó chứa định các cài đặt về căn chỉnh các khoảng cách như lề, dòng, khổ của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{MastersDoctoralThesis.cls}.
+\keyword{setspace.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về căn chỉnh các khoảng cách như lề, dòng, khổ của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{MastersDoctoralThesis.cls}.
 
 \keyword{main.pdf} -- đây là file khóa luận/tiểu luận đẹp đẽ (dưới định dạng file PDF) tạo ra bởi \LaTeX{}. Trong template này, file PDF được cung cấp sẵn. Sau khi bạn biên dịch lại template, bạn sẽ nhận được một file PDF y hệt.
 
 \keyword{main.tex} -- đây là một file quan trọng. Đây là file sẽ được \LaTeX{} biên dịch để tạo ra khóa luận/tiểu luận của bạn dưới định dạng file PDF. Nó chứa các khung và cấu trúc nội dung mà nói cho \LaTeX{} biết cách bố trí bố cục của khóa luận/tiểu luận. File này được ghi chú (comment) rất chi tiết nên bạn có thể biết chính xác thứ mỗi dòng code thực hiện và tại sao chúng ở đó. Sau khi bạn thêm thông tin cá nhân vào phần \emph{THÔNG TIN VỀ Khóa luận tốt nghiệp/Tiểu luận} -- bạn bây giờ đã bắt đầu biên soạn khóa luận/tiểu luận của mình!
+
+\keyword{main-cover.tex} -- đây là một file quan trọng. Nó chứa các đoạn code mô tả bìa chính (main cover) của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{main.tex}.
+
+\keyword{sub-cover.tex} -- đây là một file quan trọng. Nó chứa các đoạn code mô tả bìa phụ (sub-cover) của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{main.tex}.
 
 Những file mà không có sẵn trong template mà được tạo ra bởi \LaTeX{} như những file phụ trợ, bao gồm:
 
