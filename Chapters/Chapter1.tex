@@ -78,7 +78,7 @@ Nếu bạn đã quen thuộc với \LaTeX{} thì bạn nên tìm hiểu cấu t
 
 Nếu bạn mới tiếp cận với \LaTeX{} thì bạn nên đọc hết phần thông tin còn lại trong tài liệu này.
 
-Trước khi bạn bắt đầu sử dụng template này, bạn nên đảm bảo rằng định dạng của template tuân theo quy định về định dạng của khóa luận tốt nghiệp do trường bạn đề ra. Trong hầu hết các trường hợp, định dạng và bố cục của template này sẽ phù hợp. Nếu không, template có thể chỉ cần một số thay đổi nhỏ để khiến định dạng template khớp với định dạng do trường bạn đề ra. Những thay đổi này sẽ cần được thực hiện ở file \file{MastersDoctoralThesis.cls}.
+Trước khi bạn bắt đầu sử dụng template này, bạn nên đảm bảo rằng định dạng của template tuân theo quy định về định dạng của khóa luận tốt nghiệp do trường bạn đề ra. Trong hầu hết các trường hợp, định dạng và bố cục của template này sẽ phù hợp. Nếu không, template có thể chỉ cần một số thay đổi nhỏ để khiến định dạng template khớp với định dạng do trường bạn đề ra. Những thay đổi này sẽ cần được thực hiện ở file \file{HUSdissertation.cls}.
 
 
 \subsection{Thông tin về template này}
@@ -127,9 +127,9 @@ Một số file cũng được bao gồm vào trong template. Hầu hết số t
 
 \keyword{main.bib} -- đây là một file quan trọng chứa tất cả các thông tin danh mục trích dẫn và tài liệu tham khảo mà bạn sẽ trích dẫn trong khóa luận/tiểu luận (sử dụng BibTeX). Bạn có thể viết nó một cách thủ công, nhưng có các phần mềm quản lý trích dẫn sẽ giúp bạn tạo và quản lý. Tài liệu tham khảo (bibliography) là một mục lớn trong \LaTeX{} và bạn có lẽ sẽ cần đọc về định dạng BibTeX trước khi bắt đầu biên soạn. Các phần mềm quản lý trích dẫn hiện nay cho phép bạn trích xuất các trích dẫn theo định dạng BibTeX, thứ sẽ tiết kiệm công sức của các bạn rất nhiều.
 
-\keyword{MastersDoctoralThesis.cls} -- đây là một file quan trọng. Nó là file chứa các cài đặt định dạng \LaTeX{} của khóa luận tốt nghiệp/tiểu luận.
+\keyword{HUSdissertation.cls} -- đây là một file quan trọng. Nó là file chứa các cài đặt định dạng \LaTeX{} của khóa luận tốt nghiệp/tiểu luận.
 
-\keyword{setspace.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về căn chỉnh các khoảng cách như lề, dòng, khổ của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{MastersDoctoralThesis.cls}.
+\keyword{setspace.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về căn chỉnh các khoảng cách như lề, dòng, khổ của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{HUSdissertation.cls}.
 
 \keyword{setlst.sty} -- đây là một file quan trọng. Nó chứa các cài đặt về liệt kê/trích dẫn code của khóa luận tốt nghiệp/tiểu luận được đọc bởi file \file{main.tex}.
 
@@ -421,7 +421,7 @@ Còn trường hợp bạn muốn ghi tên các biến, thậm chí là cả cô
 
 Bạn nên chia nhỏ khóa luận tốt nghiệp/tiểu luận của mình thành các mục (section) và tiểu mục (subsection) một cách hợp lý, có độ dài vừa phải và trọn vẹn ý. \LaTeX{} sẽ tự động xây dựng mục lục dựa trên các lệnh \verb|\chapter{}|, \verb|\section{}| và \verb|\subsection{}| (tương ứng với \textit{chương}, \textit{mục}, và \textit{tiểu mục}) mà bạn sử dụng trong file nguồn.
 
-Mục lục nên chỉ liệt kê các nội dụng ở tối đa ba (3) cấp độ. Lệnh \verb|chapter{}| là cấp không (0). Lệnh \verb|\section{}| là cấp một (1) và lệnh \verb|\subsection{}| là cấp hai (2). Trong khóa luận/tiểu luận, nhiều khả năng bạn sẽ thậm chí dùng đến cả lệnh \verb|subsubsection{}|, tương ứng với cấp ba (3). Độ sâu mà mục lục thiết lập được đặt trong file \file{MastersDoctoralThesis.cls}. Nếu bạn cần thay đổi điều này, bạn có thể thực hiện trong file \file{main.tex}. Tuy nhiên, tốt nhất là không nên thay đổi!
+Mục lục nên chỉ liệt kê các nội dụng ở tối đa ba (3) cấp độ. Lệnh \verb|chapter{}| là cấp không (0). Lệnh \verb|\section{}| là cấp một (1) và lệnh \verb|\subsection{}| là cấp hai (2). Trong khóa luận/tiểu luận, nhiều khả năng bạn sẽ thậm chí dùng đến cả lệnh \verb|subsubsection{}|, tương ứng với cấp ba (3). Độ sâu mà mục lục thiết lập được đặt trong file \file{HUSdissertation.cls}. Nếu bạn cần thay đổi điều này, bạn có thể thực hiện trong file \file{main.tex}. Tuy nhiên, tốt nhất là không nên thay đổi!
 
 
 %----------------------------------------------------------------------------------------

@@ -1,33 +1,28 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
-% Class File
-% Version 1.6 (27/8/17)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dissertation/Seminar in Research Topics
+% LaTeX Template
+% Version 1.0 (created 05/10/2022)
 %
-% This class was downloaded from:
-% http://www.LaTeXTemplates.com
+% This template can be downloaded from:
+% https://github.com/cpc1996/HUS-Dissertation-Template
 %
-% Authors:
-% Vel (vel@latextemplates.com)
-% Johannes Böttcher
+% Version 1.0 is edited by:
+% Công Phương Cao (main editor, congphuongcao@gmail.com)
+% Nguyễn Cảnh Việt (vietncp@gmail.com)
 %
-% Notes:
-% 1) This class file defines the structure and layout of the template file (main.tex).
-% 2) It has been written in such a way that under most circumstances you should not need
-% to edit it; updating it to a newer version will be harder. If you do make changes, please change the name of
-% the file and add comments to make your changes more visible.
+% This template is developed based on:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
 %
-% Class license:
-% LPPL v1.3c (http://www.latex-project.org/lppl)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
 %	CLASS DEFINITION AND PARAMETERS
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\newcommand{\classname}{MastersDoctoralThesis}
-\ProvidesClass{\classname}[2017/08/27 v1.6 LaTeXTemplates.com]
+\newcommand{\classname}{HUSdissertation}
+\ProvidesClass{\classname}[07/11/2022 HUS Dissertation Template]
 \providecommand{\baseclass}{book}
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
@@ -544,17 +539,18 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
 \AtEndPreamble{\RequirePackage{hyperref}
-\hypersetup{pdfpagemode={UseOutlines},
-bookmarksopen=true,
-bookmarksopenlevel=0,
-hypertexnames=false,
-colorlinks=true,% Set to false to disable coloring links
-citecolor=green,% The color of citations
-linkcolor=husBlue,% The color of references to document elements (sections, figures, etc)
-urlcolor=husBlue,% The color of hyperlinks (URLs)
-pdfstartview={FitV},
-unicode,
-breaklinks=true,
+\hypersetup{
+	pdfpagemode={UseOutlines},
+	bookmarksopen=true,
+	bookmarksopenlevel=0,
+	hypertexnames=false,
+	colorlinks=true,% Set to false to disable coloring links
+	citecolor=green,% The color of citations
+	linkcolor=husBlue,% The color of references to document elements (sections, figures, etc)
+	urlcolor=husBlue,% The color of hyperlinks (URLs)
+	pdfstartview={FitV},
+	unicode,
+	breaklinks=true,
 }
 
 \pdfstringdefDisableCommands{% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
@@ -567,4 +563,3 @@ breaklinks=true,
 %----------------------------------------------------------------------------------------
 
 \endinput
-% lazyLizardTracer
