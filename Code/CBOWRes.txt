@@ -1,0 +1,24 @@
+Processed 100000 (context, word) pairs
+Processed 200000 (context, word) pairs
+Processed 300000 (context, word) pairs
+Epoch: 1 	Loss: 4257900.60084
+
+Processed 100000 (context, word) pairs
+Processed 200000 (context, word) pairs
+Processed 300000 (context, word) pairs
+Epoch: 2 	Loss: 4256209.59646
+
+Processed 100000 (context, word) pairs
+Processed 200000 (context, word) pairs
+Processed 300000 (context, word) pairs
+Epoch: 3 	Loss: 4247990.90456
+
+Processed 100000 (context, word) pairs
+Processed 200000 (context, word) pairs
+Processed 300000 (context, word) pairs
+Epoch: 4 	Loss: 4225663.18927
+
+Processed 100000 (context, word) pairs
+Processed 200000 (context, word) pairs
+Processed 300000 (context, word) pairs
+Epoch: 5 	Loss: 4104501.48929

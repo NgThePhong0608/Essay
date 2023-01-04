@@ -1,0 +1,9 @@
+index,Document,Category
+0,The sky is blue and beautiful.,weather
+1,Love this blue and beautiful sky!,weather
+2,The quick brown fox jumps over the lazy dog.,animals
+3,"A king's breakfast has sausages, ham, bacon, eggs, toast and beans",food
+4,"I love green eggs, ham, sausages and bacon!",food
+5,The brown fox is quick and the blue dog is lazy!,animals
+6,The sky is very blue and the sky is very beautiful today,weather
+7,The dog is lazy but the brown fox is quick!,animals

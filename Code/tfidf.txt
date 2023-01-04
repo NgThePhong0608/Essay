@@ -1,0 +1,3 @@
+words in dictionary:
+['and', 'bread', 'bussiness', 'football', 'game', 'in', 'like', 'national', 'noodles', 'of', 'play', 'playing', 'science', 'she', 'study', 'to', 'university', 'video', 'vietnam']
+X shape:  (4, 19)

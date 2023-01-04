@@ -1,0 +1,6 @@
+['rec.autos' 'comp.sys.mac.hardware' 'rec.motorcycles' 'misc.forsale'
+ 'comp.os.ms-windows.misc' 'alt.atheism' 'comp.graphics'
+ 'rec.sport.baseball' 'rec.sport.hockey' 'sci.electronics' 'sci.space'
+ 'talk.politics.misc' 'sci.med' 'talk.politics.mideast'
+ 'soc.religion.christian' 'comp.windows.x' 'comp.sys.ibm.pc.hardware'
+ 'talk.politics.guns' 'talk.religion.misc' 'sci.crypt']

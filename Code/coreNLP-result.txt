@@ -1,0 +1,5 @@
+('Vietnam', '3', 'compound')
+('National', '3', 'compound')
+('University', '0', 'root')
+('of', '5', 'case')
+('Science', '3', 'nmod')

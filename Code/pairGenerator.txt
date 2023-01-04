@@ -1,0 +1,11 @@
+Context (X): ['old', 'testament', 'james', 'bible'] -> Target (Y): king
+Context (X): ['first', 'book', 'called', 'genesis'] -> Target (Y): moses
+Context (X): ['beginning', 'god', 'heaven', 'earth'] -> Target (Y): created
+Context (X): ['earth', 'without', 'void', 'darkness'] -> Target (Y): form
+Context (X): ['without', 'form', 'darkness', 'upon'] -> Target (Y): void
+Context (X): ['form', 'void', 'upon', 'face'] -> Target (Y): darkness
+Context (X): ['void', 'darkness', 'face', 'deep'] -> Target (Y): upon
+Context (X): ['spirit', 'god', 'upon', 'face'] -> Target (Y): moved
+Context (X): ['god', 'moved', 'face', 'waters'] -> Target (Y): upon
+Context (X): ['god', 'said', 'light', 'light'] -> Target (Y): let
+Context (X): ['god', 'saw', 'good', 'god'] -> Target (Y): light
